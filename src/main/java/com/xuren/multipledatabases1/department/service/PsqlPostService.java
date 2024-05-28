@@ -23,7 +23,7 @@ public class PsqlPostService {
 
 
     public List<PsqlPost> findAll() {
-        return jdbcClient.sql("select id, title from public.psql_posts")
+        return jdbcClient.sql("select 2 as id, 'hello form psql' as title")
                 .query(PsqlPost.class)
                 .list();
     }

@@ -3,11 +3,13 @@ package com.xuren.multipledatabases1.department.controller;
 import com.xuren.multipledatabases1.department.dao.MsqlPost;
 import com.xuren.multipledatabases1.department.service.MsqlPostService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class MsqlPostController {
 
     private final MsqlPostService postService;

@@ -21,7 +21,7 @@ public class MsqlPostService {
     }
 
     public List<MsqlPost> findAll() {
-        return jdbcClient.sql("select id, title from dbo.msql_posts")
+        return jdbcClient.sql("select 1 as id, 'hello from sql server' as title")
                 .query(MsqlPost.class)
                 .list();
     }
